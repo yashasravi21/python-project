@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DevOps Monitoring Dashboard</title>
+
+    <meta http-equiv="refresh" content="5">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            width: 250px;
+            margin: 15px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #0077cc;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🚀 DevOps Monitoring Dashboard</h1>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>CPU Usage</h2>
+            <div class="value">{{ cpu }}%</div>
+        </div>
+
+        <div class="card">
+            <h2>Memory Usage</h2>
+            <div class="value">{{ memory }}%</div>
+        </div>
+
+        <div class="card">
+            <h2>Disk Usage</h2>
+            <div class="value">{{ disk }}%</div>
+        </div>
+
+        <div class="card">
+            <h2>Running Containers</h2>
+            <div class="value">{{ containers }}</div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Dashboard refreshes every 5 seconds
+    </div>
+
+</body>
+</html>
